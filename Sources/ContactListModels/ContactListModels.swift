@@ -1,14 +1,13 @@
-import FluentPostgreSQL
 import Foundation
 
-public struct Contact: PostgreSQLModel {
+public struct Contact {
     public var id: Int?
     public let f_name: String
     public let m_name: String
     public let l_name: String
 }
 
-public struct Address: PostgreSQLModel {
+public struct Address {
     public var id: Int?
     public let contact_id: Int
     public let address_type: AddressType
@@ -17,7 +16,7 @@ public struct Address: PostgreSQLModel {
     public let zip: String
 }
 
-public struct Phone: PostgreSQLModel {
+public struct Phone {
     public var id: Int?
     public var contact_id: Int
     public var phone_type: PhoneType
@@ -25,7 +24,7 @@ public struct Phone: PostgreSQLModel {
     public var number: String
 }
 
-public struct Date: PostgreSQLModel {
+public struct Date {
     public var id: Int?
     public var contact_id: Int
     public var date_type: DateType
