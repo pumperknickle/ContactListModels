@@ -1,15 +1,14 @@
 import FluentPostgreSQL
 import Foundation
-import Vapor
 
-public struct Contact: PostgreSQLModel, Content, Parameter {
+public struct Contact: PostgreSQLModel {
     public var id: Int?
     public let f_name: String
     public let m_name: String
     public let l_name: String
 }
 
-public struct Address: PostgreSQLModel, Content, Parameter {
+public struct Address: PostgreSQLModel {
     public var id: Int?
     public let contact_id: Int
     public let address_type: AddressType
@@ -18,7 +17,7 @@ public struct Address: PostgreSQLModel, Content, Parameter {
     public let zip: String
 }
 
-public struct Phone: PostgreSQLModel, Content, Parameter {
+public struct Phone: PostgreSQLModel {
     public var id: Int?
     public var contact_id: Int
     public var phone_type: PhoneType
@@ -26,7 +25,7 @@ public struct Phone: PostgreSQLModel, Content, Parameter {
     public var number: String
 }
 
-public struct Date: PostgreSQLModel, Content, Parameter {
+public struct Date: PostgreSQLModel {
     public var id: Int?
     public var contact_id: Int
     public var date_type: DateType
