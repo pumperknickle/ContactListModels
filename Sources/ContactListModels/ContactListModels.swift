@@ -1,13 +1,13 @@
 import Foundation
 
-public struct Contact {
+public struct Contact: Codable {
     public var id: Int?
     public let f_name: String
     public let m_name: String
     public let l_name: String
 }
 
-public struct Address {
+public struct Address: Codable {
     public var id: Int?
     public let contact_id: Int
     public let address_type: AddressType
@@ -16,7 +16,7 @@ public struct Address {
     public let zip: String
 }
 
-public struct Phone {
+public struct Phone: Codable {
     public var id: Int?
     public var contact_id: Int
     public var phone_type: PhoneType
@@ -24,7 +24,7 @@ public struct Phone {
     public var number: String
 }
 
-public struct Date {
+public struct Date: Codable {
     public var id: Int?
     public var contact_id: Int
     public var date_type: DateType
