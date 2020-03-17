@@ -19,14 +19,16 @@ public struct Address: Codable {
     public let contact_id: Int
     public let address_type: AddressType
     public let address: String
+    public let city: String
     public let state: String
     public let zip: String
     
-    public init(id: Int? = nil, contact_id: Int, address_type: AddressType, address: String, state: String, zip: String) {
+    public init(id: Int? = nil, contact_id: Int, address_type: AddressType, address: String, city: String, state: String, zip: String) {
         self.id = id
         self.contact_id = contact_id
         self.address_type = address_type
         self.address = address
+        self.city = city
         self.state = state
         self.zip = zip
     }
