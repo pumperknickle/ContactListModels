@@ -2,9 +2,16 @@ import Foundation
 
 public struct Contact: Codable {
     public var id: Int?
-    public let f_name: String
-    public let m_name: String
-    public let l_name: String
+    public let f_name: String!
+    public let m_name: String!
+    public let l_name: String!
+    
+    public init(id: Int? = nil, f_name: String, m_name: String, l_name: String) {
+        self.id = id
+        self.f_name = f_name
+        self.m_name = m_name
+        self.l_name = l_name
+    }
 }
 
 public struct Address: Codable {
@@ -14,6 +21,15 @@ public struct Address: Codable {
     public let address: String
     public let state: String
     public let zip: String
+    
+    public init(id: Int? = nil, contact_id: Int, address_type: AddressType, address: String, state: String, zip: String) {
+        self.id = id
+        self.contact_id = contact_id
+        self.address_type = address_type
+        self.address = address
+        self.state = state
+        self.zip = zip
+    }
 }
 
 public struct Phone: Codable {
@@ -22,6 +38,14 @@ public struct Phone: Codable {
     public var phone_type: PhoneType
     public var area_code: String
     public var number: String
+    
+    public init(id: Int? = nil, contact_id: Int, phone_type: PhoneType, area_code: String, number: String) {
+        self.id = id
+        self.contact_id = contact_id
+        self.phone_type = phone_type
+        self.area_code = area_code
+        self.number = number
+    }
 }
 
 public struct Date: Codable {
@@ -29,6 +53,13 @@ public struct Date: Codable {
     public var contact_id: Int
     public var date_type: DateType
     public var calendar_date: Foundation.Date
+    
+    public init(id: Int? = nil, contact_id: Int, date_type: DateType, calendar_date: Foundation.Date) {
+        self.id = id
+        self.contact_id = contact_id
+        self.date_type = date_type
+        self.calendar_date = calendar_date
+    }
 }
 
 public enum AddressType: Int, Codable {
