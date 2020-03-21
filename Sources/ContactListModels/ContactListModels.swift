@@ -36,10 +36,10 @@ public struct Address: Codable {
 
 public struct Phone: Codable {
     public var id: Int?
-    public var contact_id: Int
-    public var phone_type: PhoneType
-    public var area_code: String
-    public var number: String
+    public let contact_id: Int
+    public let phone_type: PhoneType
+    public let area_code: String
+    public let number: String
     
     public init(id: Int? = nil, contact_id: Int, phone_type: PhoneType, area_code: String, number: String) {
         self.id = id
@@ -52,9 +52,9 @@ public struct Phone: Codable {
 
 public struct Date: Codable {
     public var id: Int?
-    public var contact_id: Int
-    public var date_type: DateType
-    public var calendar_date: Foundation.Date
+    public let contact_id: Int
+    public let date_type: DateType
+    public let calendar_date: Foundation.Date
     
     public init(id: Int? = nil, contact_id: Int, date_type: DateType, calendar_date: Foundation.Date) {
         self.id = id
@@ -64,14 +64,14 @@ public struct Date: Codable {
     }
 }
 
-public enum AddressType: Int, Codable {
+public enum AddressType: Int, Codable, CaseIterable {
     case HOME = 0, WORK, OTHER
 }
 
-public enum PhoneType: Int, Codable {
+public enum PhoneType: Int, Codable, CaseIterable {
     case HOME = 0, WORK, FAX, OTHER
 }
 
-public enum DateType: Int, Codable {
+public enum DateType: Int, Codable, CaseIterable {
     case BIRTHDAY = 0, ANNIVERSARY, OTHER
 }
