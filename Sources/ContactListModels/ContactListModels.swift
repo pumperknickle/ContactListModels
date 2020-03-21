@@ -64,14 +64,17 @@ public struct Date: Codable {
     }
 }
 
-public enum AddressType: Int, Codable, CaseIterable {
+public enum AddressType: Int, Codable, CaseIterable, Identifiable {
+    public var id: AddressType { self }
     case HOME = 0, WORK, OTHER
 }
 
-public enum PhoneType: Int, Codable, CaseIterable {
+public enum PhoneType: Int, Codable, CaseIterable, Identifiable {
+    public var id: PhoneType { self }
     case HOME = 0, WORK, FAX, OTHER
 }
 
-public enum DateType: Int, Codable, CaseIterable {
+public enum DateType: Int, Codable, CaseIterable, Identifiable {
+    public var id: DateType { self }
     case BIRTHDAY = 0, ANNIVERSARY, OTHER
 }
