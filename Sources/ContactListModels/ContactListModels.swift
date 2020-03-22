@@ -71,7 +71,7 @@ public enum AddressType: Int, Codable, CaseIterable, Identifiable {
 
 public enum PhoneType: Int, Codable, CaseIterable, Identifiable {
     public var id: PhoneType { self }
-    case HOME = 0, WORK, FAX, OTHER
+    case HOME = 0, WORK, FAX, CELL, OTHER
 }
 
 public enum DateType: Int, Codable, CaseIterable, Identifiable {
