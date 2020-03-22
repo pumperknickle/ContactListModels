@@ -54,9 +54,9 @@ public struct Date: Codable {
     public var id: Int?
     public let contact_id: Int
     public let date_type: DateType
-    public let calendar_date: Foundation.Date
+    public let calendar_date: String
     
-    public init(id: Int? = nil, contact_id: Int, date_type: DateType, calendar_date: Foundation.Date) {
+    public init(id: Int? = nil, contact_id: Int, date_type: DateType, calendar_date: String) {
         self.id = id
         self.contact_id = contact_id
         self.date_type = date_type
