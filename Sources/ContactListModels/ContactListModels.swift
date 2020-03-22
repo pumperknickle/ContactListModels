@@ -3,10 +3,10 @@ import Foundation
 public struct Contact: Codable {
     public var id: Int?
     public let f_name: String!
-    public let m_name: String!
+    public let m_name: String?
     public let l_name: String!
     
-    public init(id: Int? = nil, f_name: String, m_name: String, l_name: String) {
+    public init(id: Int? = nil, f_name: String, m_name: String?, l_name: String) {
         self.id = id
         self.f_name = f_name
         self.m_name = m_name
